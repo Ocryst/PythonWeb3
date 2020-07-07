@@ -1,0 +1,19 @@
+//initiate python
+python
+
+//initiate web3
+from web3 import Web3
+
+//connect to infura
+infura_url = "https://mainnet.infura.io/v3/83379cec49f241f7b5daacf58df82824"
+web3 = Web3(Web3.HTTPProvider(infura_url))
+
+//check connection
+//should return true
+web3.isConnected()
+
+//Wallet Interaction
+web3.getBalance('paste wallet address')
+web3.fromWei(balance, 'ether')
+
+
