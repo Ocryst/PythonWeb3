@@ -1,0 +1,41 @@
+//This is for notes not usage
+//this has a solidity "helloWorld contract and the python code used to deploy that message to the network using Ganache
+
+pragma solidity ^0.4.21;
+contract hellowWorld {
+  string public greeting;
+  
+  function Greeter() public {
+    greeting = "Hello_World";
+  }
+  
+  function setGreeting(string _greeting) public {
+    greeting = _greeting;
+ }
+ 
+ function greet() view public returns(string) {
+    return greeting;
+ }
+}
+
+//In solidity set your compiler to Web3 Provider and connect to Ganache.
+//utilize localhost and the ganache port number
+
+//Deploy via python web3
+//impor dependencies
+import json
+from web3 import web3
+
+//Connect to Ganache Private Blockchain
+ganache_url = "http://127.0.0.1:7545"
+web3 = Web3(Web3.HTTPProvider(ganache_url))
+
+abi = json.load('get abi from remix')
+address = web3.toChecksumAddress("paste deployed ganache smartcontract address")
+contract = web3.eth.contract(address=address, abi=abi)
+
+//Call the function via 
+contract.functions.greet().call()
+
+//execute
+python app.py
