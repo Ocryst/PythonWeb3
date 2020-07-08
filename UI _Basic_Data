@@ -1,0 +1,19 @@
+//initialize web3 & dependencies
+import json
+from web3 import Web3
+
+//connect to infura
+infura_url = "https://mainnet.infura.io/v3/83379cec49f241f7b5daacf58df82824"
+web3 = Web3(Web3.HTTPProvider(infura_url))
+web3.isConnected()
+//run python app.py
+
+//get latest block to display in a ui environment
+//doesn't require .call() because not calling a FUNCTION
+pirnt(web3.eth.blockNumber()
+print(web3. eth.getBlock(web3.eth.blockFNumber))
+for i in range(0, 10):
+  print(web3.eth.getBlock(latest - 10)
+  
+has = 'Tx hash paste'
+print(web3.eth.getTransactionByBlock(hash, Z))
